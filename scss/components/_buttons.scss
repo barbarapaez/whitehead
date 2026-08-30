@@ -1,32 +1,47 @@
 @use "../utilities/variables" as *;
-@use "../utilities/mixins" as *;
 
 // =========================================================
-// Botones — efecto "pushable": se hunden al presionar
+// Botones — simples: un solo elemento, sin capas ni "cara"
+// desplazada. Hover con sombra suave, active con un leve
+// achique al presionar.
 // =========================================================
 
-.btn-push {
-    @include pushable(
-        $face: btn-push__face,
-        $bg: $color-surface,
-        $back: $color-accent,
-        $radius: $radius-md,
-        $border: 2px,
-        $lift: 0.2em,
-        $padding: 0.75em 1.5em,
-        $interactive: true
-    );
+.btn {
+    display: inline-block;
     font-family: $font-body;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 0.02em;
+    padding: 0.85em 1.6em;
+    margin: 0.35em 0.6em 0.35em 0;
+    border-radius: $radius-pill;
+    border: 2px solid $color-accent;
+    background-color: $color-surface;
+    color: $color-accent;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+
+    &:hover {
+        background-color: $color-accent;
+        color: $color-text-inverse;
+        box-shadow: 0 6px 14px rgba($color-accent, 0.35);
+    }
+
+    &:active {
+        transform: scale(0.97);
+        box-shadow: none;
+    }
 }
 
-.btn-push--primary {
-    .btn-push__face {
-        background: $color-primary;
-        border-color: $color-primary;
-        color: $color-text-inverse;
+.btn--primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-text-inverse;
+
+    &:hover {
+        background-color: $color-surface;
+        color: $color-primary;
+        box-shadow: 0 6px 14px rgba($color-primary, 0.3);
     }
 }

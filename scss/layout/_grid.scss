@@ -31,12 +31,12 @@ main {
 .hero {
     display: grid;
     grid-template-areas:
-        "texto"
-        "imagen";
+        "imagen"
+        "texto";
     gap: $space-3;
     align-items: center;
 
-    @include desktop {
+    @include tablet {
         grid-template-columns: 3fr 2fr;
         grid-template-areas: "texto imagen";
         gap: $space-5;
@@ -58,13 +58,17 @@ main {
 
 .retrato {
     @include organic-frame();
-    width: 240px;
-    max-width: 70vw;
+    width: 200px;
+    max-width: 60vw;
     border: 3px solid $color-accent;
+
+    @include tablet {
+        width: 260px;
+        max-width: 100%;
+    }
 
     @include desktop {
         width: 300px;
-        max-width: 100%;
     }
 }
 

@@ -1,22 +1,54 @@
 @use "../utilities/variables" as *;
-@use "../utilities/mixins" as *;
 
 // =========================================================
-// Tarjetas — mismo lenguaje visual que los botones,
-// pero estáticas (sin hover) y con borde más fino
+// Tarjetas — simples: fondo blanco, borde suave, sombra leve.
+// Sin capas ni desplazamientos: siempre se ven iguales sin
+// importar cuánto texto tenga cada una.
 // =========================================================
 
 .card {
-    @include pushable(
-        $face: card__face,
-        $bg: $color-surface,
-        $back: $color-accent,
-        $radius: $radius-lg,
-        $border: 1px,
-        $lift: 0.2em,
-        $padding: $space-3,
-        $interactive: false
-    );
     display: block;
     width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: $color-surface;
+    border: 1px solid $color-accent-soft;
+    border-radius: $radius-lg;
+    padding: $space-3;
+    box-shadow: 0 6px 18px rgba($color-primary, 0.08);
+}
+
+.card + .card {
+    margin-top: $space-3;
+}
+
+.card-grid .card + .card {
+    margin-top: 0;
+}
+
+// Metadatos (autores, fecha): chicos y grises, para que no
+// compitan visualmente con el título ni con el resumen
+.pub-meta {
+    font-size: 0.85rem;
+    color: rgba($color-text, 0.6);
+    margin-bottom: $space-1;
+}
+
+// Palabras clave: como pastillas chicas, en vez de texto corrido
+.pub-keywords {
+    font-size: 0.8rem;
+    color: rgba($color-text, 0.6);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4em;
+    margin-top: $space-2;
+
+    a {
+        background-color: rgba($color-accent-soft, 0.35);
+        color: $color-primary;
+        padding: 0.2em 0.7em;
+        border-radius: $radius-pill;
+        font-size: 0.78rem;
+    }
 }

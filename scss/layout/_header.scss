@@ -5,7 +5,8 @@
 // =========================================================
 
 header {
-    background-color: $color-primary;
+    background-color: $color-surface;
+    border-bottom: 3px dotted $color-accent;
     padding: $space-2 $space-3;
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +18,7 @@ header {
         font-family: $font-heading;
         font-weight: 700;
         font-size: 1.2rem;
-        color: $color-text-inverse;
+        color: $color-primary;
         margin: 0;
         max-width: none;
     }
