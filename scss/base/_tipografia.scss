@@ -14,6 +14,37 @@ h4 {
     margin-bottom: $space-2;
 }
 
+h1,
+h2 {
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 56px;
+        height: 4px;
+        background-color: $color-flashy;
+        border-radius: 2px;
+        margin-top: $space-1;
+    }
+}
+
+// Círculo de tamaño fijo para la primera letra de un título.
+// Se aplica a mano envolviendo la letra en el HTML:
+// Al ser un cuadrado (mismo ancho y alto) siempre da un
+// círculo perfecto, sin importar qué letra tenga adentro.
+.title-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.35em;
+    height: 1.35em;
+    line-height: 1;
+    background-color: rgba($color-flashy, 0.4);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
 h1 {
     font-size: clamp(2.2rem, 5vw, 3.4rem);
 }
@@ -56,4 +87,11 @@ blockquote {
     border-left: 4px solid $color-accent-soft;
     padding-left: $space-3;
     margin: $space-3 0;
+}
+
+// Los títulos DENTRO de una tarjeta quedan sin la línea
+// (y ahí simplemente no se usa la clase .title-dot en el HTML)
+.card h1::after,
+.card h2::after {
+    display: none;
 }
