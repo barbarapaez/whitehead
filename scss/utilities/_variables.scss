@@ -1,0 +1,42 @@
+// =========================================================
+// Variables — paleta "bosque" (Dust Grey / Dry Sage / Fern /
+// Hunter Green / Pine Teal)
+// =========================================================
+
+// --- Colores base de la paleta ---
+$dust-grey: #DAD7CD;
+$dry-sage: #A3B18A;
+$fern: #588157;
+$hunter-green: #3A5A40;
+$pine-teal: #344E41;
+
+// --- Roles semánticos (así el resto del sitio no depende
+// de los nombres literales de color, sino de su función) ---
+$color-bg: #F5F4F1;        // Dust Grey aclarado, fondo general
+$color-surface: #FFFFFF;   // caras de tarjetas y botones
+$color-text: #121212;      // texto principal, casi negro
+$color-text-inverse: #FFFFFF;
+
+$color-primary: $pine-teal;    // header, footer
+$color-accent: $hunter-green;  // bordes, capas traseras, hover
+$color-accent-soft: $dry-sage; // detalles decorativos, nunca como fondo de texto
+
+// --- Tipografía ---
+$font-heading: 'Playfair Display', serif;
+$font-body: 'Raleway', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+
+// --- Radios y bordes ---
+$radius-md: 0.75em;
+$radius-lg: 1.1em;
+$radius-pill: 999px;
+
+// --- Espaciados ---
+$space-1: 0.5rem;
+$space-2: 1rem;
+$space-3: 1.5rem;
+$space-4: 2.5rem;
+$space-5: 4rem;
+
+// --- Breakpoints ---
+$bp-tablet: 768px;
+$bp-desktop: 1024px;

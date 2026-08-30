@@ -1,0 +1,10 @@
+@use "variables" as *;
+
+// =========================================================
+// Placeholders
+// =========================================================
+
+// Transición de color compartida por distintos links
+%link-transition {
+    transition: color 0.15s ease;
+}

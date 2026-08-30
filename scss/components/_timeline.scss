@@ -1,0 +1,34 @@
+@use "../utilities/variables" as *;
+
+// =========================================================
+// Timeline: actividades realizadas, en orden cronológico
+// =========================================================
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    border-left: 3px solid $color-accent-soft;
+    padding-left: $space-3;
+}
+
+.timeline-item {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: calc(-#{$space-3} - 7px);
+        top: 0.35rem;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        border: 2px solid $color-bg;
+    }
+}
+
+.timeline-year {
+    font-weight: 700;
+    color: $color-primary;
+}

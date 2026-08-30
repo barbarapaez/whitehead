@@ -6,6 +6,11 @@
     <title>Equipo | PICIFFYH Whitehead</title>
     <meta name="description" content="Conocé al equipo de investigación del proyecto PICIFFYH sobre la metafísica procesual de Whitehead, radicado en la Universidad Nacional de Córdoba.">
     <meta name="keywords" content="equipo de investigación, Whitehead, filosofía de la ciencia, UNC, Facultad de Filosofía y Humanidades">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <header>
@@ -13,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="proyecto.html">Proyecto</a></li>
+                <li><a href="proyecto.html">El Proyecto</a></li>
                 <li><a href="equipo.html">Equipo</a></li>
                 <li><a href="nuestro-trabajo.html">Nuestro Trabajo</a></li>
                 <li><a href="publicaciones.html">Publicaciones</a></li>
@@ -31,22 +36,38 @@
 
         <section>
             <h2>Integrantes</h2>
-            <dl>
-                <dt>Andrés A. Ilcic</dt>
-                <dd>Director</dd>
-
-                <dt>Pío García</dt>
-                <dd>Co-director</dd>
-
-                <dt>Paulina Abaca</dt>
-                <dd>Integrante</dd>
-
-                <dt>María Itati Chiliguay Torramorell</dt>
-                <dd>Integrante</dd>
-
-                <dt>Bárbara Esther Paez Sueldo</dt>
-                <dd>Integrante</dd>
-            </dl>
+            <div class="card-grid">
+                <article class="card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card__face">
+                        <h3>Andrés A. Ilcic</h3>
+                        <p>Director</p>
+                    </div>
+                </article>
+                <article class="card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="card__face">
+                        <h3>Pío García</h3>
+                        <p>Co-director</p>
+                    </div>
+                </article>
+                <article class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card__face">
+                        <h3>Paulina Abaca</h3>
+                        <p>Integrante</p>
+                    </div>
+                </article>
+                <article class="card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="card__face">
+                        <h3>María Itati Chiliguay Torramorell</h3>
+                        <p>Integrante</p>
+                    </div>
+                </article>
+                <article class="card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card__face">
+                        <h3>Bárbara Esther Paez Sueldo</h3>
+                        <p>Integrante</p>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
@@ -54,5 +75,9 @@
         <p>Proyecto PICIFFYH · FFyH, Universidad Nacional de Córdoba · Argentina</p>
         <p><a href="contacto.html">Contacto</a></p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

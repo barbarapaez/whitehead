@@ -1,0 +1,22 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// =========================================================
+// Tarjetas — mismo lenguaje visual que los botones,
+// pero estáticas (sin hover) y con borde más fino
+// =========================================================
+
+.card {
+    @include pushable(
+        $face: card__face,
+        $bg: $color-surface,
+        $back: $color-accent,
+        $radius: $radius-lg,
+        $border: 1px,
+        $lift: 0.2em,
+        $padding: $space-3,
+        $interactive: false
+    );
+    display: block;
+    width: 100%;
+}

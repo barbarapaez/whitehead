@@ -1,0 +1,33 @@
+@use "../utilities/variables" as *;
+@use "../utilities/placeholders" as *;
+
+// =========================================================
+// Footer
+// =========================================================
+
+footer {
+    background-color: $color-primary;
+    color: rgba($color-text-inverse, 0.85);
+    padding: $space-3;
+    margin-top: $space-5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: $space-2;
+    text-align: center;
+
+    p {
+        margin: 0;
+        font-size: 0.85rem;
+        max-width: none;
+    }
+
+    a {
+        @extend %link-transition;
+
+        &:hover {
+            color: $color-accent-soft;
+        }
+    }
+}

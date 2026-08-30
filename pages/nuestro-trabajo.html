@@ -6,6 +6,11 @@
     <title>Nuestro trabajo | PICIFFYH Whitehead</title>
     <meta name="description" content="Actividades, jornadas y publicaciones del proyecto PICIFFYH sobre la obra de Alfred North Whitehead, desarrolladas en la UNC.">
     <meta name="keywords" content="jornadas de estudios Whitehead, seminario de lectura, publicaciones, CIFFyH, actividades de investigación">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <header>
@@ -13,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="proyecto.html">Proyecto</a></li>
+                <li><a href="proyecto.html">El Proyecto</a></li>
                 <li><a href="equipo.html">Equipo</a></li>
                 <li><a href="nuestro-trabajo.html">Nuestro Trabajo</a></li>
                 <li><a href="publicaciones.html">Publicaciones</a></li>
@@ -31,35 +36,41 @@
 
         <section>
             <h2>Actividades realizadas</h2>
-            <ol>
-                <li>
-                    <p><strong>2023.</strong> Estudiantes del equipo organizaron y expusieron trabajos en un simposio sobre la obra de Whitehead, en el marco de las V Jornadas de Jóvenes Investigadores en Filosofía de la Ciencia (JJFIC).</p>
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <p><span class="timeline-year">2023.</span> Estudiantes del equipo organizaron y expusieron trabajos en un simposio sobre la obra de Whitehead, en el marco de las V Jornadas de Jóvenes Investigadores en Filosofía de la Ciencia (JJFIC).</p>
                 </li>
-                <li>
-                    <p><strong>2024.</strong> Dictamos un seminario de lectura sobre la obra de Whitehead para estudiantes de la Licenciatura en Filosofía.</p>
+                <li class="timeline-item">
+                    <p><span class="timeline-year">2024.</span> Dictamos un seminario de lectura sobre la obra de Whitehead para estudiantes de la Licenciatura en Filosofía.</p>
                 </li>
-                <li>
-                    <p><strong>2024.</strong> Los trabajos finales del seminario fueron invitados a presentarse en las Primeras Jornadas de Estudios Whitehead, realizadas en la FFyH, con la participación de Víctor Rodríguez y Aaron Saal, profesores eméritos de la UNC.</p>
+                <li class="timeline-item">
+                    <p><span class="timeline-year">2024.</span> Los trabajos finales del seminario fueron invitados a presentarse en las Primeras Jornadas de Estudios Whitehead, realizadas en la FFyH, con la participación de Víctor Rodríguez y Aaron Saal, profesores eméritos de la UNC.</p>
                 </li>
-                <li>
-                    <p><strong>2025.</strong> Se presenta el proyecto para su consideración en en el Centro de Investigaciones "Maria Saleme de Burnichon".</p>
+                <li class="timeline-item">
+                    <p><span class="timeline-year">2025.</span> Se presenta el proyecto para su consideración en en el Centro de Investigaciones "Maria Saleme de Burnichon".</p>
                 </li>
-                <li>
-                    <p><strong>2026.</strong> Bárbara Paez y Pío García editaron un volumen de selección de trabajos de las Jornadas (2024), actualmente en evaluación para las Colecciones del CIFFyH.</p>
+                <li class="timeline-item">
+                    <p><span class="timeline-year">2026.</span> Bárbara Paez y Pío García editaron un volumen de selección de trabajos de las Jornadas (2024), actualmente en evaluación para las Colecciones del CIFFyH.</p>
                 </li>
             </ol>
         </section>
 
         <section>
             <h2>Próximamente en esta página</h2>
-            <article>
-                <h3>Galería de fotos</h3>
-                <p>Un registro visual de nuestros seminarios, jornadas y encuentros de trabajo.</p>
-            </article>
-            <article>
-                <h3>Publicaciones y repositorios</h3>
-                <p>Enlaces a los libros y volúmenes publicados por el equipo, incluyendo el volumen de las Primeras Jornadas de Estudios Whitehead una vez publicado.</p>
-            </article>
+            <div class="card-grid">
+                <article class="card" data-aos="fade-up">
+                    <div class="card__face">
+                        <h3>Galería de fotos</h3>
+                        <p>Un registro visual de nuestros seminarios, jornadas y encuentros de trabajo.</p>
+                    </div>
+                </article>
+                <article class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card__face">
+                        <h3>Publicaciones y repositorios</h3>
+                        <p>Enlaces a los libros y volúmenes publicados por el equipo, incluyendo el volumen de las Primeras Jornadas de Estudios Whitehead una vez publicado.</p>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
@@ -67,5 +78,9 @@
         <p>Proyecto PICIFFYH · FFyH, Universidad Nacional de Córdoba · Argentina</p>
         <p><a href="contacto.html">Contacto</a></p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

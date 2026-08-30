@@ -1,0 +1,59 @@
+@use "../utilities/variables" as *;
+
+// =========================================================
+// Tipografía
+// =========================================================
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-heading;
+    color: $color-primary;
+    line-height: 1.2;
+    margin-bottom: $space-2;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+    margin-top: $space-4;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p {
+    margin-bottom: $space-2;
+    max-width: 68ch;
+}
+
+dt {
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $color-primary;
+    margin-top: $space-2;
+}
+
+dd {
+    margin: 0.25rem 0 0;
+    max-width: 68ch;
+}
+
+blockquote {
+    font-family: $font-heading;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: $color-primary;
+    border-left: 4px solid $color-accent-soft;
+    padding-left: $space-3;
+    margin: $space-3 0;
+}
