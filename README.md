@@ -4,6 +4,8 @@ Sitio web del proyecto de investigación **PICIFFYH**, radicado en el Centro de 
 
 Este sitio también es el trabajo final de la materia de desarrollo web.
 
+**Sitio publicado:** https://proyectowhitehead.netlify.app/
+
 ## Estructura del sitio
 
 - `index.html` — inicio
