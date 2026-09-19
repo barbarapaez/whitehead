@@ -1,0 +1,44 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// =========================================================
+// Carrusel de fotos (Bootstrap Carousel) — Jornadas Whitehead
+// =========================================================
+
+.carousel {
+    border-radius: $radius-lg;
+    overflow: hidden;
+    border: 1px solid $color-accent-soft;
+    box-shadow: 0 6px 18px rgba($color-primary, 0.08);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+
+    @include tablet {
+        height: 420px;
+    }
+}
+
+// Para fotos donde el recorte centrado corta cabezas: ancla
+// el recorte arriba en vez de al medio.
+// (selector compuesto a propósito: así gana en especificidad
+// a la regla de arriba, que si no, la pisa)
+.carousel-item img.carousel-img--top {
+    object-position: center top;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: $color-accent;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba($color-primary, 0.55);
+    border-radius: 50%;
+    padding: 1.2rem;
+    background-size: 55%;
+}

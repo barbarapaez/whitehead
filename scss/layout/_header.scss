@@ -1,25 +1,28 @@
 @use "../utilities/variables" as *;
 
 // =========================================================
-// Header
+// Header / Navbar (Bootstrap)
 // =========================================================
+// Bootstrap ya trae .navbar como flex + wrap + justify-content:
+// space-between, así que acá solo la revestimos con nuestros
+// colores y tipografía en lugar de reescribir el layout.
 
-header {
+.navbar {
     background-color: $color-surface;
     border-bottom: 3px dotted $color-accent;
     padding: $space-2 $space-3;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: $space-2;
+}
 
-    p {
-        font-family: $font-heading;
-        font-weight: 700;
-        font-size: 1.2rem;
+.navbar-brand {
+    font-family: $font-heading;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: $color-primary;
+    padding: 0;
+    margin: 0;
+
+    &:hover,
+    &:focus {
         color: $color-primary;
-        margin: 0;
-        max-width: none;
     }
 }
